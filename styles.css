@@ -1,0 +1,718 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    right: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0  10px rgba(0, 0,0, 0.5);
+    z-index: 1000;
+}
+
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+}
+
+section nav  ul {
+    list-style: none;
+ 
+}
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+section nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+
+section nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+section nav ul li a:hover{
+    color: #fac031;
+}
+
+section nav .icons a{
+   font-size: 20px;
+   color: black;
+   margin: 0 5px;
+   cursor: pointer;
+   transition: 0.3s;
+   text-decoration: none;
+
+}
+.icons a:hover{
+    color: #fac031;
+    cursor: pointer;
+}
+
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 130px;
+}
+
+section .main .maintext h1{
+    font-size: 60px;
+    position: relative;
+    top: -90px;
+    left: 100px;
+
+}
+section .main .maintext h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+    line-height: 22px;
+    font-size: 70px;
+}
+section .main .mainimage img{
+    width: 700px;
+    position: relative;
+    left: 100px;
+}
+section p{
+    width: 550px;
+    text-align: justify;
+    position: relative;
+    bottom: 50px;
+    left: 100px;
+    line-height: 22px;
+}
+section .mainbtn{
+    background: #fac031;
+    position: relative;
+    cursor: pointer;
+    left: 100px;
+    bottom: 30px;
+    padding: 12px  25px;
+    width: 150px;
+    transition: 0.3s;
+}
+section .mainbtn a {
+    color: white;
+    margin-right: 5px ;
+    text-decoration: none;
+}
+
+section .mainbtn i{
+    color: white;
+    transition: 0.3s;
+}
+
+section .mainbtn:hover{
+    transform: translateX(7px);
+}
+
+/* about scc */
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+.about .aboutmain{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/* had to reduce the image size */
+.about img{
+    width: 400px;
+    position: relative;
+    top: 60px;
+}
+.about .aboutmain .abouttext h1 span{
+    color: #fac031;
+    margin-right:  15px;
+    font-family: mv boli;
+}
+.about .aboutmain .abouttext h1{
+    font-size: 55px;
+    position: relative;
+    bottom: 50px;
+}
+.about .aboutmain .abouttext h3{
+    font-size: 30px;
+    margin: 0 0 50px  0;
+}
+.about .aboutmain .abouttext p{
+    width: 650px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 22px;
+}
+.about .aboutbtn{
+    background: #fac031;
+    padding: 12px 25px;
+    position: relative;
+    color: white;
+    left: 45%;
+    bottom: -50px;
+    text-decoration: none;
+}
+
+
+
+/* menu scc */
+.menu{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.menu h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.menu h1 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+.menu h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px ;
+    display: block;
+    position: relative;
+    bottom: 15px;
+    background: #fac031;
+}
+.menu .menubox{
+    width: 95%; 
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+.menu .menubox .menucard{
+    width: 325px;
+    height: 480px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0,0, 0.5);
+}
+.menu .menubox .menucard .menuimage{
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.menu .menubox .menucard .menuimage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+.menu .menubox .menucard .menuimage:hover img{
+    transform: scale(1.1);   
+}
+.menu .menubox .menucard .smallcard{
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 1;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+.menu .menubox .menucard:hover .smallcard{
+    position: relative;
+    top: -240px;
+    right: 20px;
+    opacity: 1;
+}
+.menu .menubox .menucard .smallcard i{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    color: black;
+    cursor: pointer;
+    text-shadow: 0 0 6px black;
+    transition: 0.2s;
+}
+.menu .menubox .menucard .smallcard i:hover{
+    color: #fac031;
+}
+.menu .menubox .menucard .menuinfo h2{
+    width: 60%;
+    color: #fac031;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 25px;
+}
+.menuinfo p{
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+}
+.menuinfo h3{
+    text-align: center;
+    margin-top: 10px;
+}
+.menuicon{
+    color: #fac031;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+.menubtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background: black;
+    padding: 8px 10px;
+    margin: 0 80px;
+    transition: 0.3s;
+}
+
+/* gallary css */
+.gallary{
+    width: 100%;
+    padding: 70px 0;
+}
+.gallary h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallary h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+
+.gallary h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display:block;
+    position: relative;
+    bottom: 15px;
+}
+.gallary .gallaryimagebox {
+    width: 95%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+} 
+.gallary .gallaryimagebox .gallaryimage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+.gallaryimage img{
+    width: 100%;
+    transition: 0.3s;
+}
+.gallaryimage:hover img{
+    opacity: 0.4;
+}
+.gallaryimage h3{
+    position: absolute;
+    font-size: 35px;
+    margin-bottom: 130px;
+    color: #fac031;
+    font-family: polo;
+    z-index: 5;
+    opacity: 0;
+    transition: 0.3s;
+}
+.gallaryimage:hover h3{
+    opacity: 1;
+}
+.gallaryimage p{
+    position: absolute;
+    width: 400px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    opacity: 0;
+    z-index: 5;
+    transition: 0.3s;
+}
+.gallaryimage:hover p{
+    opacity: 1;
+}
+.gallaryimage .gallarybtn{
+position: absolute;
+margin-top: 180px;
+color: black;
+background: #fac031;
+padding: 7px 25px;
+text-decoration: none;
+opacity: 0;
+transform: translateY(45px);
+z-index: 5;
+transition: 0.3s;
+}
+.gallaryimage:hover .gallarybtn{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* review css */
+.review h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.review h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+
+.review h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fac031;
+    position: relative;
+    bottom: 15px;
+    display: block;
+}
+.review .reviewbox{
+    width: 95%;
+    margin: 70px auto;
+    display: flex;
+}
+.reviewcard{
+    width: 350px;
+    height: 335px;
+    box-shadow: 0 20px 8px rgba(0, 0,0, 0.5);
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0 8px;
+    
+}
+.reviewtext{
+    text-align: center;
+    transition: 0.9s;
+}
+.reviewprofile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.1s;
+}
+.reviewprofile img{
+    width: 100px;
+}
+.reviewcard:hover .reviewprofile{
+    transform: translatex(-60px);
+    display: none;
+}
+.reviewprofile img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+/* .reviewtext .name{
+    color: black;
+    transition: 0.3s;
+} */
+/* .reviewcard:hover .name{
+    transform: translateY(-50px);
+} */
+.reviewicon{
+    transition: 0.3s;
+    color: #fac031;
+}
+.reviewcard:hover .reviewtext{
+    transform: translateY(30px);
+}
+
+.reviewsocials i{
+    margin: 5px 1px;
+    font-size: 15px;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.reviewcard:hover .reviewsocials i{
+opacity: 1;
+transform: translateY(-8px);
+}
+.reviewtext p{
+    text-align: center;
+    line-height: 22px;
+    transition: 0.3s;
+    display: none;
+}
+.reviewcard:hover .reviewtext p{
+    display: block;
+   
+}
+
+/* oedres */
+.order{
+    width: 100%;
+    height: 100vh;
+    background-image: url(imgs/puzzle.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.order h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 55px;
+}
+
+.order h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+.order h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+.ordermain{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ordermain img{
+    width: 600px;
+
+}
+.ordermain form{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-row-gap: 0 10px;
+}
+.input p{
+    line-height: 25px;
+}
+.input{
+    margin: 5px;
+}
+.input input{
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #cccccc ;
+    background: #eeeeee;
+    outline: none;
+    border-radius: 3px;
+}
+.input input:focus{
+    border: #fac031 2px solid;
+}
+.orderbtn{
+    background-color: #fac031;
+    padding: 10px 0;
+    color: white;
+    width: 40%;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    position: relative;
+    left: -610px;
+    bottom: -70px;
+}
+
+/* team */
+.team{
+    margin-top: 200px;
+    width: 100%;
+    height: 90vh;
+    /* background-image: url(imgs/cam.jpeg); */
+    background-size: cover;
+    background-position: center;
+}
+.team h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    margin-bottom: 30px;
+}
+.team h1 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+.team h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+.teambox{
+    width: 95%;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 13%;
+}
+.teambox .profile{
+    width: 320px;
+    height: 310px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0, 0,0, 0.5);
+    transition: 0.4s;
+}
+.teambox .profile:hover{
+    border-radius: 20px;
+    height: 320px;
+}
+.team .profile img{
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0,0, 0.5);
+    z-index: 2;
+}
+.teambox .profile:hover img{
+    border-radius: 20px;
+    margin-top: -230px;
+}
+.teambox .profile .info{
+    position: absolute;
+    text-align: center;
+    top:25% ;
+    transition: 0.4s;
+}
+.teambox .profile:hover .info{
+    top: 60%;
+}
+.info .name{
+    color: #fac031;
+    margin-bottom: 15px;
+}
+.info .bio{
+    width: 70;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+.teamicon  i{
+    margin: 10px 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.teamicon i:hover{
+    color: #fac031;
+}
+/* 
+footer */
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: #eeeeee;
+}
+.footermain{
+    display: flex;
+    grid-template-columns: repeat(1fr 1fr 1fr 1fr);
+}
+.footertag{
+    text-align: center;
+}
+.footertag h2{
+    color: black;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+.footertag p{
+    margin: 10px 0;
+}
+.footertag i{
+    margin: 0 5px;
+    cursor: pointer;
+}
+.footertag i:hover{
+    color: #fac031;
+}
+footer .end{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: center;
+}
+footer .end span{
+    color: #fac031;
+    margin-left: 10px ;
+}
+::-webkit-scrollbar{
+    width: 13px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 15px;
+    box-shadow: inset 0  0 5px rgba(0, 0,0, 0.5);
+}
+::-webkit-slider-thumb{
+    background: #fac031;
+    border-radius: 15px;
+}
